@@ -3,6 +3,7 @@ from os import getenv
 akey = getenv('API_KEY')
 gmaps = googlemaps.Client(akey)
 
+hi = "Hello, World!"
 
 def get_best_distance(org, dest):
     courier = {'clx_port_klang': '3.0319924887507144, 101.37344116244806', 'pl_petaling_jaya': '3.112924170027219, 101.63982650389863', 'gdex_batu_caves': '3.265154613796736, 101.68024844550233',
