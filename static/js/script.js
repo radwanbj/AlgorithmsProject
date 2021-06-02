@@ -1,31 +1,75 @@
+$(document).ready(function () {
+  $("#myForm").on('submit', function (event) {
+    
+    event.preventDefault();
+    
+    let distance = $('#distance:checked').val();
+    let distanceCheck = false
+    if (distance === "on"){
+      distanceCheck = true
+    }
+
+    let sentiment = $('#sentiment:checked').val();
+    let sentimentCheck = false
+    if (sentiment === "on"){
+      sentimentCheck = true
+    }
+
+    let customer = $('#customer').find(":selected").val();
+
+      $.ajax({
+          data: {
+              sentiment: sentimentCheck,
+              distance: distanceCheck,
+              customer: customer
+          },
+          type: 'POST',
+          url: '/'
+      })
+          .done(function (data) {
+              if (data.error) {
+                  alert(data.error);
+              } else {         
+                var listy = `<ol>`
+                data.data.forEach(element => {
+                  listy += `<li>${element[0]} ${(element[1])/1000}   km</li>`
+                }); 
+                console.log(data)
+                listy += `</ol>`
+                  $('#courierList').html(listy)
+                calculateAndDisplayRoute(directionsService, directionsRenderer, data.coor, data.bestCourier)
+              }
+          });
+  });
+
+})
+
+
+let directionsService;
+let directionsRenderer;
+
 function initMap() {
-    const directionsService = new google.maps.DirectionsService();
-    const directionsRenderer = new google.maps.DirectionsRenderer();
+    directionsService = new google.maps.DirectionsService();
+    directionsRenderer = new google.maps.DirectionsRenderer();
     const map = new google.maps.Map(document.getElementById("map"), {
       zoom: 7,
       center: { lat: 3.1000170516638885,lng: 101.53071480907951 },
     });
     directionsRenderer.setMap(map);
-  
-    console.log("radwan")
-
-    calculateAndDisplayRoute(directionsService, directionsRenderer);
-      //document.getElementById("start").addEventListener("change", onChangeHandler);
-    //document.getElementById("end").addEventListener("change", onChangeHandler);
   }
   
-  function calculateAndDisplayRoute(directionsService, directionsRenderer) {
+  function calculateAndDisplayRoute(directionsService, directionsRenderer, coor, bestCourier) {
     directionsService.route(
       {
         origin: {
-          query: '3.3615395462207878,101.56318183511695'
+          query: coor.origin
         },
         destination: {
-          query: '3.1000170516638885,101.53071480907951'
+          query: coor.destination
         },
         waypoints: [
             {
-          location: '3.112924170027219, 101.63982650389863',
+          location: bestCourier,
           stopover: true,
         }
         ],

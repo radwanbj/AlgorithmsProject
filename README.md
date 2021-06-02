@@ -2,7 +2,7 @@
 
 ## Team Members:
 
-1. Radwan Ali Ramadan
+1. Radwan Ali
 2. Aisyah
 3. Ahmed
 4. Ming Jun
