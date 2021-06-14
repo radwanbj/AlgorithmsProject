@@ -46,7 +46,7 @@ if company == 3:
 print("\nCounting Stopwords for selected article............")
 
 # Open the file in read mode
-text = open(article[company] + "-article-%s.txt" % display, "r", encoding="utf8")
+text = open("articles\\" + article[company] + "-article-%s.txt" % display, "r", encoding="utf8")
 
 # Create an empty dictionary
 d = dict()
@@ -81,7 +81,7 @@ for line in text:
 
 
 # Print the contents of dictionary to a txt file
-output = open(article[company] + "-stopwords-%s.txt" % display, "w")
+output = open("articles-stopwords\\" + article[company] + "-stopwords-%s.txt" % display, "w")
 for key in list(d.keys()):
     output.write(key + ":" + str(d[key]) + "\n")
 output.close()

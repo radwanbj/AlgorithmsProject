@@ -39,7 +39,7 @@ if company == 3:
     display = input("Please select title: ")
 
 # Open the file in read mode
-text = open(article[company] + "-article-%s.txt" % display, "r", encoding="utf8")
+text = open("articles\\" + article[company] + "-article-%s.txt" % display, "r", encoding="utf8")
 
 # Create an empty dictionary
 d = dict()
@@ -71,7 +71,7 @@ for line in text:
             d[word] = 1
 
 # Print the contents of dictionary to a txt file
-output = open(article[company] + "-output-%s.txt" % display, "w")
+output = open("articles-wordcount\\" + article[company] + "-output-%s.txt" % display, "w")
 for key in list(d.keys()):
     output.write(key + ":" + str(d[key]) + "\n")
 
