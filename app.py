@@ -9,7 +9,11 @@ app = Flask(__name__)
 # analysis = Analysis(debug=True)
 # sentiment_data = analysis.run_analysis()
 sentiment_data = {'citylink': 0.09074733096085409, 'poslaju': 0.09577632361689471,
+<<<<<<< HEAD
                   'dhl': 0.09228696530818457, 'jnt': 0.10873915943962642, 'gdex': 0.08104956268221575}
+=======
+                  'dhl': 0.5228696530818457, 'jnt': 0.10873915943962642, 'gdex': 0.01}
+>>>>>>> 76452e1fbb4da43ca0380a183d7c1ba40be74bdb
 
 
 @app.route("/", methods=['POST', 'GET'])
@@ -19,6 +23,7 @@ def root():
         sentiment = (request.form['sentiment']) == 'true'
         customerNumber = int(request.form['customer'])
 
+<<<<<<< HEAD
         # Show Chosen Customer's Origin and Destination
         org1 = (customer[customerNumber]['origin']).split(',')
         dest1 = (customer[customerNumber]['destination']).split(',')
@@ -36,16 +41,33 @@ def root():
         if sentiment:  # sentiment check ON case
             distanceList, bestCourier = coordinates.get_best_distance(
                 customer[customerNumber]['origin'], customer[customerNumber]['destination'])
+=======
+        print(sentiment, "  ", request.form['sentiment'])
+        if sentiment:
+            distanceList, bestCourier = coordinates.get_best_distance(
+                customer[customerNumber]['origin'], customer[customerNumber]['destination'])
+            print(distanceList)
+            print(bestCourier)
+>>>>>>> 76452e1fbb4da43ca0380a183d7c1ba40be74bdb
             distanceList = [list(
                 x) + [sentiment_data[x[0]], (1 + sentiment_data[x[0]]) * x[1]] for x in distanceList]
             distanceList = sorted(distanceList, key=lambda x: x[3])
             bestCourier = coordinates.courier[distanceList[0][0]]
+<<<<<<< HEAD
             return jsonify({'data': distanceList, 'coor': customer[customerNumber], 'bestCourier': bestCourier, 'custOrigin': str(org1), 'custDestination': str(dest1)})
 
         else:  # sentiment check OFF case
             distanceList, bestCourier = coordinates.get_best_distance(
                 customer[customerNumber]['origin'], customer[customerNumber]['destination'])
             return jsonify({'data': distanceList, 'coor': customer[customerNumber], 'bestCourier': bestCourier,  'custOrigin': str(org1), 'custDestination': str(dest1)})
+=======
+            return jsonify({'data': distanceList, 'coor': customer[customerNumber], 'bestCourier': bestCourier})
+            #print("Updated: ", distanceList)
+        else:
+            distanceList, bestCourier = coordinates.get_best_distance(
+                customer[customerNumber]['origin'], customer[customerNumber]['destination'])
+            return jsonify({'data': distanceList, 'coor': customer[customerNumber], 'bestCourier': bestCourier})
+>>>>>>> 76452e1fbb4da43ca0380a183d7c1ba40be74bdb
 
     else:
         return render_template("index.html", akey=getenv('API_KEY'))

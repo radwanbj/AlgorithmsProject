@@ -3,8 +3,13 @@ import nltk
 
 # prompt user to enter company's name
 company = int(
+<<<<<<< HEAD:Problem 2/n5-wordcount.py
     input("Get word count. Press \n0:JnT\n1:Pos Laju\n2:CityLink\n3:DHL\n"))
 article = ["jnt", "poslaju", "citylink", "dhl"]
+=======
+    input("Get word count. Press \n0:JnT\n1:Pos Laju\n2:CityLink\n3:DHL\n4:Gdex\n"))
+article = ["jnt", "poslaju", "citylink", "dhl","gdex"]
+>>>>>>> 76452e1fbb4da43ca0380a183d7c1ba40be74bdb:n5-wordcount.py
 
 jnt = ["\n1. MCMC Issues Warning To J&T Express Over Video Showing Staff Mishandling Customers' Parcels",
        "2. J&T Express Experience Decline In Ordered Items Following Bad Publicity",
@@ -22,6 +27,10 @@ dhl = ["\n1. How DHL continues to make its people top priority through the most 
        "2. Digitalisation the way forward for DHL Express",
        "3. DHL Express Malaysia partners Aerodyne Group on drone delivery services"]
 
+gdex = ["\n1. Announcing: GDEX Berhad (KLSE:GDEX) Stock Increased An Energizing 115% In The Last Year",
+        "2. GDEX expansion, diversification accelerates domestic e-commerce logistics growth",
+        "3. Enhancing delivery via the digital platform"]
+
 if company == 0:
     for i in range(0, len(jnt)):
         print(jnt[i])
@@ -37,6 +46,10 @@ if company == 2:
 if company == 3:
     for i in range(0, len(dhl)):
         print(dhl[i])
+    display = input("Please select title: ")
+if company == 4:
+    for i in range(0, len(dhl)):
+        print(gdex[i])
     display = input("Please select title: ")
 
 # Open the file in read mode

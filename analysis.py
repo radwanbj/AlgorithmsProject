@@ -1,6 +1,10 @@
 import re
 from algorithms import *
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76452e1fbb4da43ca0380a183d7c1ba40be74bdb
 class Analysis():
     def __init__(self, debug=False):
         self.articles = {
@@ -24,7 +28,10 @@ class Analysis():
             "gdex": ["gdex-article-1.txt",
                      "gdex-article-2.txt",
                      "gdex-article-3.txt"]
+<<<<<<< HEAD
 
+=======
+>>>>>>> 76452e1fbb4da43ca0380a183d7c1ba40be74bdb
         }
 
         self.debug = debug
@@ -46,12 +53,21 @@ class Analysis():
             neutral, pos, neg = self.article_sentiment(text)
             sentimental_data[courier] = (neg / self.articles_len)
             pos_neg[courier] = [pos, neg]
+<<<<<<< HEAD
             print(courier, " Length: ", self.articles_len, " Positive: ", pos, " Negative: ", neg)
             print(sentimental_data)
 
         return sentimental_data
     
     # count article's positive , negative words and neutral words
+=======
+            # print(f"COURIER {courier}:  ",
+            #       sentimental_data[courier], " Length: ", self.articles_len, " Positive: ", pos, " Negative: ", neg, " Neutral: ", neutral)
+        sentimental_data['gdex'] = 0.01
+        return pos_neg
+    # count article's positive , negative words and neutral words
+
+>>>>>>> 76452e1fbb4da43ca0380a183d7c1ba40be74bdb
     def article_sentiment(self, text):
         with open('articles/negative_words.txt', encoding='utf-8') as File1:
             negativeFile = File1.read().lower()

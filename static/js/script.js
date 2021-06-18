@@ -33,10 +33,17 @@ $(document).ready(function () {
                 if (sentimentCheck) {
                     var listy = `<table>
                   <tr>
+<<<<<<< HEAD
                     <th>Courier (B)</th>
                     <th>Normalized Distance (km)</th>
                     <th>Distance (km)</th>
                     <th>Negative Sentiment %</th>
+=======
+                    <th>Courier</th>
+                    <th>Normalized Distance</th>
+                    <th>Distance (km)</th>
+                    <th>Negative Sentiment</th>
+>>>>>>> 76452e1fbb4da43ca0380a183d7c1ba40be74bdb
                   </tr>`
                   data.data.forEach(element => {
                     listy += `<tr>
@@ -46,11 +53,19 @@ $(document).ready(function () {
                     <td>${(element[2]*100).toFixed(2)} %</td> </tr>`
                 }); 
 
+<<<<<<< HEAD
+=======
+                console.log(data)
+>>>>>>> 76452e1fbb4da43ca0380a183d7c1ba40be74bdb
                 listy += `</table>`
                 }else{
                     var listy = `<table>
                   <tr>
+<<<<<<< HEAD
                     <th>Courier (B)</th>
+=======
+                    <th>Courier</th>
+>>>>>>> 76452e1fbb4da43ca0380a183d7c1ba40be74bdb
                     <th>Distance (km)</th>
                   </tr>`
                   data.data.forEach(element => {
@@ -59,12 +74,20 @@ $(document).ready(function () {
                     <td>${(element[1])/1000}</td> </tr>`
                   }); 
 
+<<<<<<< HEAD
                   listy += `</table>`
                 }
                   var org1 = `(A) Origin : { ` + data.custOrigin + ` }`;
                   var dest1 = `(C) Destination : { ` + data.custDestination + ` }`;
                   $('#origin').html(org1)
                   $('#destination').html(dest1)
+=======
+                  console.log(data)
+                  listy += `</table>`
+                }
+
+                
+>>>>>>> 76452e1fbb4da43ca0380a183d7c1ba40be74bdb
                   $('#courierList').html(listy)
                 calculateAndDisplayRoute(directionsService, directionsRenderer, data.coor, data.bestCourier)
               }

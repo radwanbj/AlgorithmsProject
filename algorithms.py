@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76452e1fbb4da43ca0380a183d7c1ba40be74bdb
 def badCharHeuristic(string, size):
     '''
     The preprocessing function for
