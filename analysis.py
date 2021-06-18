@@ -20,7 +20,11 @@ class Analysis():
 
             "jnt": ["jnt-article-1.txt",
                     "jnt-article-2.txt",
-                    "jnt-article-3.txt"]
+                    "jnt-article-3.txt"],
+
+            "gdex": ["gdex-article-1.txt",
+                     "gdex-article-2.txt",
+                     "gdex-article-3.txt"]
         }
 
         self.debug = debug
@@ -45,8 +49,6 @@ class Analysis():
             # print(f"COURIER {courier}:  ",
             #       sentimental_data[courier], " Length: ", self.articles_len, " Positive: ", pos, " Negative: ", neg, " Neutral: ", neutral)
         sentimental_data['gdex'] = 0.01
-        print(sentimental_data)
-        print(pos_neg)
         return pos_neg
     # count article's positive , negative words and neutral words
 
