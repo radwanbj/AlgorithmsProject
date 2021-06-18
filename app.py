@@ -56,5 +56,3 @@ def courier(path):
 
 if __name__ == "__main__":
     app.run(debug=True)
-
-# API_KEY=AIzaSyCSrzJ-4qIsdk1ip29MdrLqAKLE93VelYs
