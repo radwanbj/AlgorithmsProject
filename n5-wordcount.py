@@ -1,9 +1,10 @@
 import nltk
-#nltk.download('stopwords')
+# nltk.download('stopwords')
 
-#prompt user to enter company's name
-company = int(input("Get word count. Press \n0:JnT\n1:Pos Laju\n2:CityLink\n3:DHL\n"))
-article = ["jnt", "poslaju", "citylink", "dhl"]
+# prompt user to enter company's name
+company = int(
+    input("Get word count. Press \n0:JnT\n1:Pos Laju\n2:CityLink\n3:DHL\n4:Gdex\n"))
+article = ["jnt", "poslaju", "citylink", "dhl","gdex"]
 
 jnt = ["\n1. MCMC Issues Warning To J&T Express Over Video Showing Staff Mishandling Customers' Parcels",
        "2. J&T Express Experience Decline In Ordered Items Following Bad Publicity",
@@ -21,6 +22,10 @@ dhl = ["\n1. How DHL continues to make its people top priority through the most 
        "2. Digitalisation the way forward for DHL Express",
        "3. DHL Express Malaysia partners Aerodyne Group on drone delivery services"]
 
+gdex = ["\n1. Announcing: GDEX Berhad (KLSE:GDEX) Stock Increased An Energizing 115% In The Last Year",
+        "2. GDEX expansion, diversification accelerates domestic e-commerce logistics growth",
+        "3. Enhancing delivery via the digital platform"]
+
 if company == 0:
     for i in range(0, len(jnt)):
         print(jnt[i])
@@ -37,9 +42,14 @@ if company == 3:
     for i in range(0, len(dhl)):
         print(dhl[i])
     display = input("Please select title: ")
+if company == 4:
+    for i in range(0, len(dhl)):
+        print(gdex[i])
+    display = input("Please select title: ")
 
 # Open the file in read mode
-text = open("articles\\" + article[company] + "-article-%s.txt" % display, "r", encoding="utf8")
+text = open("articles/" + article[company] +
+            "-article-%s.txt" % display, "r", encoding="utf8")
 
 # Create an empty dictionary
 d = dict()
@@ -71,12 +81,12 @@ for line in text:
             d[word] = 1
 
 # Print the contents of dictionary to a txt file
-output = open("articles-wordcount\\" + article[company] + "-output-%s.txt" % display, "w")
+output = open("articles-wordcount/" +
+              article[company] + "-output-%s.txt" % display, "w")
 for key in list(d.keys()):
     output.write(key + ":" + str(d[key]) + "\n")
 
 output.close()
 
-print("\n" + str(wordcount), "words found and removed and stored in %s-output-%s.txt" % (article[company], display))
-
-
+print("\n" + str(wordcount), "words found and removed and stored in %s-output-%s.txt" %
+      (article[company], display))

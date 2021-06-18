@@ -2,8 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2610faad-d03a-471e-8484-f60bd9cbefb3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/n6-plotly-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/articles-stopwords/citylink-stopwords-1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/articles-stopwords/citylink-stopwords-1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/articles-stopwords/citylink-stopwords-2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/articles-stopwords/citylink-stopwords-2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/articles-stopwords/citylink-stopwords-3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/articles-stopwords/citylink-stopwords-3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/articles-stopwords/dhl-stopwords-1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/articles-stopwords/dhl-stopwords-1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/articles-stopwords/dhl-stopwords-2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/articles-stopwords/dhl-stopwords-2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/articles-stopwords/dhl-stopwords-3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/articles-stopwords/dhl-stopwords-3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/articles-stopwords/jnt-stopwords-1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/articles-stopwords/jnt-stopwords-1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/articles-stopwords/jnt-stopwords-2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/articles-stopwords/jnt-stopwords-2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/articles-stopwords/jnt-stopwords-3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/articles-stopwords/jnt-stopwords-3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/articles-stopwords/poslaju-stopwords-1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/articles-stopwords/poslaju-stopwords-1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/articles-stopwords/poslaju-stopwords-2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/articles-stopwords/poslaju-stopwords-2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/articles-stopwords/poslaju-stopwords-3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/articles-stopwords/poslaju-stopwords-3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coordinates.py" beforeDir="false" afterPath="$PROJECT_DIR$/coordinates.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/courier-img/citylink.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courier-img/dhl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courier-img/dhl.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courier-img/jnt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courier-img/poslaju.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courier/citylink.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courier/dhl.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courier/jnt.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/courier/poslaju.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/courier.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/plot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/n5-stopwords.py" beforeDir="false" afterPath="$PROJECT_DIR$/n5-stopwords.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/n5-wordcount.py" beforeDir="false" afterPath="$PROJECT_DIR$/n5-wordcount.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/n6-plotly.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot/cl-stopwords-JOIN.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot/cl-wordcount-JOIN.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot/dhl-stopword-JOIN.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot/dhl-wordcount-JOIN.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot/jnt-stopwords-JOIN.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot/jnt-wordcount-Join.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot/pl-stopword-JOIN.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot/pl-wordcount-JOIN.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parse-word-freq.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,11 +65,63 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager" selected="Python.n5-stopwords">
+    <configuration name="n5-stopwords" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AlgorithmsProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/n5-stopwords.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="n5-wordcount" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AlgorithmsProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/n5-wordcount.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.n5-stopwords" />
+        <item itemvalue="Python.n5-wordcount" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="Vcs.Log.Tabs.Properties">
@@ -42,6 +134,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add n6 codes" />

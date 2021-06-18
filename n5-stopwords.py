@@ -7,8 +7,8 @@ newStopWords = ["a", "about", "above", "after", "again", "against", "ain", "all"
 stopwords.extend(newStopWords)
 
 #prompt user to enter company's name
-company = int(input("Get stopwords count. Press \n0:JnT\n1:Pos Laju\n2:CityLink\n3:DHL\n"))
-article = ["jnt", "poslaju", "citylink", "dhl"]
+company = int(input("Get stopwords count. Press \n0:JnT\n1:Pos Laju\n2:CityLink\n3:DHL\n4: Gdex\n"))
+article = ["jnt", "poslaju", "citylink", "dhl", "gdex"]
 
 jnt = ["\n1. MCMC Issues Warning To J&T Express Over Video Showing Staff Mishandling Customers' Parcels",
        "2. J&T Express Experience Decline In Ordered Items Following Bad Publicity",
@@ -26,6 +26,10 @@ dhl = ["\n1. How DHL continues to make its people top priority through the most 
        "2. Digitalisation the way forward for DHL Express",
        "3. DHL Express Malaysia partners Aerodyne Group on drone delivery services"]
 
+gdex = ["\n1. Announcing: GDEX Berhad (KLSE:GDEX) Stock Increased An Energizing 115% In The Last Year",
+        "2. GDEX expansion, diversification accelerates domestic e-commerce logistics growth",
+        "3. Enhancing delivery via the digital platform"]
+
 if company == 0:
     for i in range(0, len(jnt)):
         print(jnt[i])
@@ -41,6 +45,10 @@ if company == 2:
 if company == 3:
     for i in range(0, len(dhl)):
         print(dhl[i])
+    display = input("Please select title: ")
+if company == 4:
+    for i in range(0, len(dhl)):
+        print(gdex[i])
     display = input("Please select title: ")
 
 print("\nCounting Stopwords for selected article............")
@@ -71,6 +79,8 @@ for line in text:
         if word in stopwords:
             # It's on the stopwords list
             sw_found += 1
+        else:
+            # The word is not in the stopwords list
             if word in d:
                 # Increment count of word by 1
                 d[word] = d[word] + 1
@@ -78,12 +88,10 @@ for line in text:
                 # Add the word to dictionary with count 1
                 d[word] = 1
 
-
-
 # Print the contents of dictionary to a txt file
 output = open("articles-stopwords\\" + article[company] + "-stopwords-%s.txt" % display, "w")
 for key in list(d.keys()):
     output.write(key + ":" + str(d[key]) + "\n")
 output.close()
 
-print("\n" + str(sw_found), "stop words found and removed and stored in %s-stopwords-%s.txt" % (article[company], display))
+print("\n" + str(sw_found), "stop words found and removed. Words that are not a stopwords are stored in %s-stopwords-%s.txt" % (article[company], display))
