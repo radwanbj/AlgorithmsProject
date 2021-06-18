@@ -1,6 +1,10 @@
-# AlgorithmsProject
+# Helix - The Best Courier Web App
 
-## Team Members:
+## WIA2005 - Algorithm Design and Analysis
+
+### Group Project
+
+#### Team Members:
 
 1. Radwan Ali
 2. Aisyah

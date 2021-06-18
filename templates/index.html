@@ -8,9 +8,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    <title>Helix</title>
+    <style>
+        table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 50%;
+        }
+
+        td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+        }
+
+        tr:nth-child(even) {
+        background-color: #dddddd;
+        }
+    </style>
 </head>
 
 <body>
+    <nav class="navbar justify-content-center navbar-expand-sm bg-dark p-2 navbar-dark">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/plot.html">Sentiment Plots</a>
+          </li>
+        </ul>
+      </nav>
+
     <div class="container-fluid my-3 w-75 h-75 border border-dark" id="map"></div>
 
     <div class="container d-flex justify-content-center">
@@ -40,10 +69,11 @@
 
         </form>
     </div>
-    <div id="courierList" class="d-flex justify-content-center">
-
-
-    </div>
+    <div><br></div>
+    <div id="origin" class="d-flex justify-content-center"></div>
+    <div id="destination" class="d-flex justify-content-center"></div>
+    <div><br></div>
+    <div id="courierList" class="d-flex justify-content-center"> </div>
 </body>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"

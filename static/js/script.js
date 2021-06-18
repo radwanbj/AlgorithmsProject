@@ -10,7 +10,7 @@ $(document).ready(function () {
     }
 
     let sentiment = $('#sentiment:checked').val();
-    let sentimentCheck = false
+    var sentimentCheck = false
     if (sentiment === "on"){
       sentimentCheck = true
     }
@@ -29,17 +29,48 @@ $(document).ready(function () {
           .done(function (data) {
               if (data.error) {
                   alert(data.error);
-              } else {         
-                var listy = `<ol>`
-                data.data.forEach(element => {
-                  listy += `<li>${element[0]} ${(element[1])/1000}   km</li>`
+              } else {
+                if (sentimentCheck) {
+                    var listy = `<table>
+                  <tr>
+                    <th>Courier (B)</th>
+                    <th>Normalized Distance (km)</th>
+                    <th>Distance (km)</th>
+                    <th>Negative Sentiment %</th>
+                  </tr>`
+                  data.data.forEach(element => {
+                    listy += `<tr>
+                    <td>${element[0]}</td>
+                    <td>${(element[3]/1000).toFixed(2)}</td>
+                    <td>${(element[1]/1000).toFixed(2)}</td>
+                    <td>${(element[2]*100).toFixed(2)} %</td> </tr>`
                 }); 
-                console.log(data)
-                listy += `</ol>`
+
+                listy += `</table>`
+                }else{
+                    var listy = `<table>
+                  <tr>
+                    <th>Courier (B)</th>
+                    <th>Distance (km)</th>
+                  </tr>`
+                  data.data.forEach(element => {
+                    listy += `<tr>
+                    <td>${element[0]}</td>
+                    <td>${(element[1])/1000}</td> </tr>`
+                  }); 
+
+                  listy += `</table>`
+                }
+                  var org1 = `(A) Origin : { ` + data.custOrigin + ` }`;
+                  var dest1 = `(C) Destination : { ` + data.custDestination + ` }`;
+                  $('#origin').html(org1)
+                  $('#destination').html(dest1)
                   $('#courierList').html(listy)
                 calculateAndDisplayRoute(directionsService, directionsRenderer, data.coor, data.bestCourier)
               }
           });
+
+          
   });
 
 })
